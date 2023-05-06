@@ -5,26 +5,21 @@
 # --Nombre de buzz
 # --Elementos a imprimir
 
-import clasePalabra
-
+from clasePalabra import Palabra
+from elemento import Elemento
 
 #----------------------- Parametros -------------------------#
-#primerTexto = "fizz"
-#interbaloPrimerTexto = 3
+elementosAImprimir = 30
 
-#segundoTexto = "buzz"
-#interbaloSegundoTexto = 5
-elementosAImprimir = 100
+#lista que guarda las palabras a usar
+listaPalabras=[]
+listaPalabras.append(Palabra(3,"FIZZ"))
+listaPalabras.append(Palabra(5,"BUZZ"))
 
-Palabra1 = Palabra()
-Palabra1.interbalo = 3
-Palabra1.texto = "Fizz"
-
+elemento = Elemento(listaPalabras)
 
 #---------------------- Codigo ------------------------------#
-
-
-
-for i in 100:
-    print ("numero"+i)
+for i in range(elementosAImprimir): #por cada elemento que quiero hacer
+    print(elemento.generarTexto(i+1))
+    #print(listaPalabras[i])
 
