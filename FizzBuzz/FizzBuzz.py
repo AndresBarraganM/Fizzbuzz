@@ -9,10 +9,8 @@ from clasePalabra import Palabra
 from elemento import Elemento
 
 #----------------------- Parametros -------------------------#
-def fizzBuzz():
+def fizzBuzz(elementosAImprimir):
     salida =""
-
-    elementosAImprimir = 30
 
     #lista que guarda las palabras a usar
     listaPalabras=[]

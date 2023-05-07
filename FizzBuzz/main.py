@@ -1,17 +1,18 @@
 #Principal
 import tkinter as Tkint
+from Applicacion import *
 from tkinter import *
 
-from FizzBuzz import fizzBuzz
+
+global mainWindow
 mainWindow = Tk()
-
-def iniciarPrograma():
-    labelElementos = Label(mainWindow, text=fizzBuzz() )
-    labelElementos.pack()
-    
+mainWindow.title("customFizzBuzz")
 
 
-botonIniciar = Button(mainWindow, text="iniciar", command= iniciarPrograma)
-botonIniciar.pack()
+Applicacion(mainWindow)
+
+
+
+
 
 mainWindow.mainloop()
