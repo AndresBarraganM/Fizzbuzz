@@ -9,17 +9,20 @@ from clasePalabra import Palabra
 from elemento import Elemento
 
 #----------------------- Parametros -------------------------#
-elementosAImprimir = 30
+def fizzBuzz():
+    salida =""
 
-#lista que guarda las palabras a usar
-listaPalabras=[]
-listaPalabras.append(Palabra(3,"FIZZ"))
-listaPalabras.append(Palabra(5,"BUZZ"))
+    elementosAImprimir = 30
 
-elemento = Elemento(listaPalabras)
+    #lista que guarda las palabras a usar
+    listaPalabras=[]
+    listaPalabras.append(Palabra(3,"FIZZ"))
+    listaPalabras.append(Palabra(5,"BUZZ"))
 
-#---------------------- Codigo ------------------------------#
-for i in range(elementosAImprimir): #por cada elemento que quiero hacer
-    print(elemento.generarTexto(i+1))
-    #print(listaPalabras[i])
+    elemento = Elemento(listaPalabras)
 
+    #---------------------- Codigo ------------------------------#
+    for i in range(elementosAImprimir): #por cada elemento que quiero hacer
+        salida += str(elemento.generarTexto(i+1))+"\n"
+    
+    return salida
