@@ -2,21 +2,25 @@ from tkinter import *
 from FizzBuzz import fizzBuzz
 
 def Applicacion(mainWindow):
-    
-    txtCantidad = Label(mainWindow, text="Cuantos mostrarar:" )
-
-    entradaCantidad = Entry( )
+    labelElementos = Label(mainWindow,text="Presione Iniciar:")
+    labelElementos.grid(row=5,column=0)
 
     def iniciarPrograma():
-        labelElementos = Label(mainWindow, text=fizzBuzz(int(entradaCantidad.get())) )
-        labelElementos.pack()
+        labelElementos.config(text=fizzBuzz(int(entradaCantidad.get())))
+        labelElementos.grid(row=12,column=0)
+  
+
+    txtCantidad = Label(mainWindow, text="Cuantos mostrarar:" )
+    txtCantidad.grid(row=0, column=0)
+
+    entradaCantidad = Entry( )
+    entradaCantidad.grid(row=1,column=0)
+
+    
 
     botonIniciar = Button(mainWindow, text="iniciar", command= iniciarPrograma)
-    #botonIniciar.grid(row=3,column=2)
+    botonIniciar.grid(row=1,column=1)
 
-    #txtDefineInterbalo1.grid(row=0, column=0)
-    #entradaInterbalo1.grid(row=1,column=0)
+    
+    
 
-    txtCantidad.pack()
-    entradaCantidad.pack()
-    botonIniciar.pack()
